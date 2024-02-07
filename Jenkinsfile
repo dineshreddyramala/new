@@ -7,7 +7,7 @@ pipeline {
 	        	checkout scm
 	    	}
         }
-	 stage ('Build'){
+	stage ('Build'){
 	        steps {
 			sh 'mvn clean install'
                 }
@@ -24,10 +24,11 @@ pipeline {
                 sh 'mvn package'
             }
         }
+	    
 	stage('Deployment') {
 	   steps {
 		cp  target/gamutkart.war /home/dinesh/apache-tomcat-9.0.85/webapps/
-	}
+	    }
 	}
     }
 }
