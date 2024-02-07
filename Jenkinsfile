@@ -27,7 +27,7 @@ pipeline {
 	    
 	stage('Deployment') {
 	   steps {
-		cp  target/gamutkart.war /home/dinesh/apache-tomcat-9.0.85/webapps/
+		cp  'target/gamutkart.war /home/dinesh/apache-tomcat-9.0.85/webapps/'
 	    }
 	}
     }
