@@ -27,7 +27,7 @@ pipeline {
 
     stage('Deployment') {
       steps {
-       sh 'sshpass -p ramala123 scp target/gamutkart.war dinesh@172.31.39.126:/home/dinesh/apache-tomcat-9.0.85/webapps/'
+       sh 'sshpass -p ramala123 scp target/gamutkart.war dinesh@172.31.39.126:/home/dinesh/apache-tomcat-9.0.85/webapps'
 
       }
     }
